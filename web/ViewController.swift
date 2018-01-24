@@ -23,6 +23,7 @@ class ViewController: NSViewController {
         self.inputField.becomeFirstResponder()
         
         progressBar.sizeToFit()
+        progressBar.controlTint = .graphiteControlTint
         
         myWebView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         

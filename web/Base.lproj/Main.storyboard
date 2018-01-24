@@ -759,19 +759,8 @@
                                         </connections>
                                     </button>
                                     <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="1" controlSize="small" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Hjg-bA-Vr6">
-                                        <rect key="frame" x="95" y="291" width="291" height="12"/>
+                                        <rect key="frame" x="0.0" y="318" width="480" height="12"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                        <shadow key="shadow">
-                                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </shadow>
-                                        <contentFilters>
-                                            <ciFilter name="CIHueAdjust">
-                                                <configuration>
-                                                    <real key="inputAngle" value="0.69999999999999996"/>
-                                                    <null key="inputImage"/>
-                                                </configuration>
-                                            </ciFilter>
-                                        </contentFilters>
                                     </progressIndicator>
                                 </subviews>
                             </visualEffectView>
