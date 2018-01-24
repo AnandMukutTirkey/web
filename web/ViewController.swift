@@ -14,13 +14,25 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var inputField: NSTextField!
     @IBOutlet weak var myWebView: WKWebView!
+    @IBOutlet weak var progressBar: NSProgressIndicator!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.myWebView.layer?.cornerRadius = 10
         self.inputField.becomeFirstResponder()
-
+        
+        progressBar.sizeToFit()
+        
+        myWebView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress"{
+            progressBar.isHidden = myWebView.estimatedProgress == 1
+            progressBar.doubleValue = myWebView.estimatedProgress
+        }
     }
     
     override func viewWillAppear() {

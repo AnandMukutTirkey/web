@@ -758,10 +758,25 @@
                                             <action selector="stopLoading:" target="Ece-B9-Msc" id="6ZL-hd-fFD"/>
                                         </connections>
                                     </button>
+                                    <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="1" controlSize="small" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Hjg-bA-Vr6">
+                                        <rect key="frame" x="95" y="291" width="291" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <shadow key="shadow">
+                                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </shadow>
+                                        <contentFilters>
+                                            <ciFilter name="CIHueAdjust">
+                                                <configuration>
+                                                    <real key="inputAngle" value="0.69999999999999996"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
+                                    </progressIndicator>
                                 </subviews>
                             </visualEffectView>
                             <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ece-B9-Msc">
-                                <rect key="frame" x="6" y="8" width="467" height="281"/>
+                                <rect key="frame" x="6" y="8" width="467" height="280"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -785,6 +800,7 @@
                     <connections>
                         <outlet property="inputField" destination="WGe-sL-XaG" id="iBU-fs-6Xb"/>
                         <outlet property="myWebView" destination="Ece-B9-Msc" id="GLV-0K-RS5"/>
+                        <outlet property="progressBar" destination="Hjg-bA-Vr6" id="JQs-84-upX"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
